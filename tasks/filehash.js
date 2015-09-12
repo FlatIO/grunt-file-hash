@@ -142,7 +142,7 @@ module.exports = function (grunt) {
 
             function saveFile(filePath, hashed) {
                 var srcFile = getRealPath(filePath);
-                var distFile = path.join(dest, getFileName(renameFormat, filePath, hashed));
+                var distFile = getFileName(renameFormat, filePath, hashed);
                 if (srcFile !== distFile) {
                     if (distFile.indexOf(dest) === -1) {
                         grunt.log.warn('Renamed target "' + distFile + '" is not in dest directory.');
